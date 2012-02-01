@@ -1,12 +1,12 @@
-const Main = imports.ui.main;
+const Main = imports.ui.main.panel;
 
 function init() {
 }
 
 function disable() {
-        Main.panel._dateMenu.actor.show();
+        Main._dateMenu.actor.show();
 }
 
 function enable() {
-        Main.panel._dateMenu.actor.hide();
+        Main._dateMenu.actor.hide();
 }
