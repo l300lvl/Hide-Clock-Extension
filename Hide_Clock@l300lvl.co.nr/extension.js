@@ -17,14 +17,14 @@ function init(metadata) {
 }
 
 function disable() {
-    let thing
+    let menu
     if (age=="old") menu = Main.panel._dateMenu
     else            menu = Main.panel.statusArea.dateMenu
     menu.actor.show()
 }
 
 function enable() {
-    let thing
+    let menu
     if (age=="old") menu = Main.panel._dateMenu
     else            menu = Main.panel.statusArea.dateMenu
     menu.actor.hide()
