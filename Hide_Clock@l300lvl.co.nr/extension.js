@@ -1,12 +1,15 @@
 const Config = imports.misc.config
 const Main = imports.ui.main
 
+let age
+
 function init(metadata) {
     let current_version = Config.PACKAGE_VERSION.split('.')
-    if (current_version.length != 3 || current_version[0] != 3) throw new Error("Strange version number (extension.js:9).")
+    if (current_version.length != 3 || current_version[0] != 3) throw new Error("Strange version number (extension.js:8).")
     
     switch (current_version[1]) {
-        case"3": global.log("Warning of extension [" + metadata.uuid + "]:\n              Old development release detected (" + Config.PACKAGE_VERSION + "). You should upgrade!\n")   //eak
+        case"2": global.log("Warning of extension [" + metadata.uuid + "]:\n              Old development release detected (" + Config.PACKAGE_VERSION + "). You should upgrade!\n")   //eak
+        case"3":
         case"4": age = "old"
             break
         case"5": global.log("Warning of extension [" + metadata.uuid + "]:\n              Development release detected (" + Config.PACKAGE_VERSION + "). Loading as a 3.6 release.\n") //eak
